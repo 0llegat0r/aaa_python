@@ -5,7 +5,7 @@ from typing import Dict
 class ColorizeMixin:
     def __repr__(self):
         text = super().__repr__()
-        return f"\033[0;{self.repr_color_code};40m{text}"
+        return f"\033[0;{self.repr_color_code};40m{text}\x1b[0m"
 
 
 class BaseAdvert:

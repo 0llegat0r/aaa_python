@@ -8,7 +8,7 @@ class ColorizeMixin:
 
     @staticmethod
     def colorize(text: str, color_code: int):
-        return f"\033[0;{color_code};40m {text}"
+        return f"\033[0;{color_code};40m{text}\x1b[0m"
 
 
 class AdvertAttrs:
